@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NewsApp</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 
     <div class="jumbotron" style="color:black">
+ 
         <h1 style="color:black">
-         Flask Simple News Web Application
+     
+            Flask Simple News Web Application
+     
         </h1>
+     
     </div>
-
-    <div class="container"> 
-        {% for new, desc, i in context %}
+     
+     
+    <div class="container">
+     
+        {% for new, desc,link, i in context %}
      
         <img src="{{i}}" alt="">
         <h3>News: </h3> {{new}}
         <h4>Description: </h4> {{desc}}
+        <h5>Link: </h5> {{link}}
      
         {% endfor %}
+     
+     
     </div>
 
     <!-- Optional JavaScript -->
