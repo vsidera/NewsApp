@@ -29,9 +29,10 @@
                     {% for new, desc,link, i in context %}
                     <img src="{{i}}" alt="" style="width:100%">
                     <div class="container">
-                        <h3>{{new}}</h3> 
-                        <p>{{desc}}</p> 
-                        <p>{{link}}</p> 
+                        <h5>{{new}}</h5> 
+                        <h6>{{desc}}</h6> 
+                        <!-- <h6>{{link}}</h6>  -->
+                        <a href="{{link}}">View story</a>
                     </div>
                     {% endfor %}
                 </div>
