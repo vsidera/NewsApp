@@ -36,3 +36,11 @@ h5{
   margin-bottom: 2px;
   border-bottom-width: 2px black;
 }
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  margin-top :20px;
+}

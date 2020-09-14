@@ -3,10 +3,10 @@ from newsapi import NewsApiClient
 
 app = Flask(__name__)
 
-@app.route("/")
-def index():
+@app.route("/bbc")
+def bbc():
     newsapi = NewsApiClient(api_key="6466c55e78594af19e719ad4539357ed")
-    topheadlines = newsapi.get_top_headlines(sources="al-jazeera-english")
+    topheadlines = newsapi.get_top_headlines(sources="bbc-news")
 
     articles = topheadlines['articles']
 
@@ -29,10 +29,10 @@ def index():
 
     return render_template('index.html' , context= mylist)
 
-@app.route("/bbc")
-def bbc():
+@app.route("/")
+def index():
     newsapi = NewsApiClient(api_key="6466c55e78594af19e719ad4539357ed")
-    topheadlines = newsapi.get_top_headlines(sources="bbc-news")
+    topheadlines = newsapi.get_top_headlines(sources="al-jazeera-english")
 
     articles = topheadlines['articles']
 
